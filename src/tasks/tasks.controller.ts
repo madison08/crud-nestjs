@@ -1,11 +1,11 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put, Req } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Injectable, NotFoundException, Param, Post, Put, Req } from '@nestjs/common';
 import { TasksDto } from './dto/create-task.dto';
 import { TasksService } from './tasks.service'
 
 @Controller('tasks')
 export class TasksController {
 
-    constructor(private tasksService: TasksService){}
+    constructor(public tasksService: TasksService){}
 
     @Get()
     getAllTasks(){

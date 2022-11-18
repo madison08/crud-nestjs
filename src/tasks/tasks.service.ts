@@ -5,12 +5,7 @@ import { TasksRepository } from "src/tasks.repository";
 @Injectable()
 export class TasksService{
 
-    taskRepo: TasksRepository;
-
-    constructor(){
-        // le service est cree avec des dependance
-        // A ne pas faire
-        this.taskRepo = new TasksRepository();
+    constructor(public taskRepo: TasksRepository){
 
     }
 
